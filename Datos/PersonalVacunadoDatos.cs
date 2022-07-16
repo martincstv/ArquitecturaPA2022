@@ -51,6 +51,7 @@ namespace Datos
             catch (Exception e)
             {
                 var error = e.Message;
+                return null;
                 throw;
             }
         }
@@ -92,6 +93,7 @@ namespace Datos
             catch (Exception e)
             {
                 var error = e.Message;
+                return null;
                 throw;
             }
         }
@@ -204,7 +206,7 @@ namespace Datos
             catch (Exception e)
             {
                 var error = e.Message;
-                throw;
+                return null;
             }
         }
 

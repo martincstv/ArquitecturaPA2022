@@ -50,6 +50,17 @@ namespace Presentacion
         {
             dataGridView_ListaPersonasVacunadas.DataSource = null;
             dataGridView_ListaPersonasVacunadas.DataSource = PersonalVacunadoNegocio.DevolverListaPersonasVacunadas();
+            dataGridView_ListaPersonasVacunadas.Columns["Id_Genero"].Visible = false;
+            dataGridView_ListaPersonasVacunadas.Columns[0].HeaderText = "ID";
+            dataGridView_ListaPersonasVacunadas.Columns[2].HeaderText = "GENERO";
+            dataGridView_ListaPersonasVacunadas.Columns[3].HeaderText = "NOMBRE";
+            dataGridView_ListaPersonasVacunadas.Columns[4].HeaderText = "APELLIDO";
+            dataGridView_ListaPersonasVacunadas.Columns[5].HeaderText = "CEDULA";
+            dataGridView_ListaPersonasVacunadas.Columns[6].HeaderText = "TELEFONO";
+            dataGridView_ListaPersonasVacunadas.Columns[7].HeaderText = "NUMERO_DOSIS";
+            dataGridView_ListaPersonasVacunadas.Columns[8].HeaderText = "FECHA_NACIMIENTO";
+            dataGridView_ListaPersonasVacunadas.Columns[9].HeaderText = "DIRECCION";
+
         }
 
         private void SumatoriaNumeroDosis()
@@ -60,19 +71,30 @@ namespace Presentacion
 
         private void button_Guardar_Click(object sender, EventArgs e)
         {
-            GuardarPersonaVacunada();
+            try
+            {
+                GuardarPersonaVacunada();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Complete los campos vacios para guardar");
+            }
+                
         }
 
         private void GuardarPersonaVacunada()
         {
-            personalVacunado.Nombre = textBox_Nombre.Text.ToUpper();
-            personalVacunado.Apellido = textBox_Apellido.Text.ToUpper();
-            personalVacunado.Cedula = textBox_Cedula.Text;
-            personalVacunado.Id_Genero = (int) comboBox_Genero.SelectedValue;
-            personalVacunado.Telefono = textBox_Telefono.Text;
-            personalVacunado.NumeroDosis = Convert.ToInt32(textBox_NumeroDosis.Text);
-            personalVacunado.FechaNacimiento = dateTimePicker_FechaNacimiento.Value;
-            personalVacunado.Direccion = textBox_Direccion.Text.ToUpper();
+            if (personalVacunado == null)
+                personalVacunado = new PersonalVacunadoEntidad();
+
+                personalVacunado.Nombre = textBox_Nombre.Text.ToUpper();
+                personalVacunado.Apellido = textBox_Apellido.Text.ToUpper();
+                personalVacunado.Cedula = textBox_Cedula.Text;
+                personalVacunado.Id_Genero = Convert.ToInt32(comboBox_Genero.SelectedValue);
+                personalVacunado.Telefono = textBox_Telefono.Text;
+                personalVacunado.NumeroDosis = Convert.ToInt32(textBox_NumeroDosis.Text);
+                personalVacunado.FechaNacimiento = dateTimePicker_FechaNacimiento.Value;
+                personalVacunado.Direccion = textBox_Direccion.Text.ToUpper();       
 
             personalVacunado = PersonalVacunadoNegocio.Guardar(personalVacunado);
             if (personalVacunado != null)
@@ -203,8 +225,16 @@ namespace Presentacion
 
         private void dataGridView_ListaPersonasVacunadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var id = Convert.ToInt32(dataGridView_ListaPersonasVacunadas.Rows[e.RowIndex].Cells["Id"].Value.ToString());
-            CargarPersonalVacunadoPorId(id);
+            try
+            {
+                var id = Convert.ToInt32(dataGridView_ListaPersonasVacunadas.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+                CargarPersonalVacunadoPorId(id);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione una fila del conjunto de datos");
+            }
+            ;
         }
 
         private void CargarPersonalVacunadoPorId(int id)

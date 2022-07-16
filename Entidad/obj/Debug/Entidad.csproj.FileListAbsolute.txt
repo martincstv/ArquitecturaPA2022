@@ -10,3 +10,9 @@ D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA20
 D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.dll
 D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\bin\Debug\Entidad.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\bin\Debug\Entidad.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.pdb

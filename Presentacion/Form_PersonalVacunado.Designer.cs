@@ -61,6 +61,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.button_Nuevo);
             this.groupBox1.Controls.Add(this.comboBox_Genero);
             this.groupBox1.Controls.Add(this.label10);
@@ -85,7 +88,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(300, 549);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PERSONA VACUNADA";
             // 
@@ -94,7 +97,7 @@
             this.button_Nuevo.Location = new System.Drawing.Point(37, 489);
             this.button_Nuevo.Name = "button_Nuevo";
             this.button_Nuevo.Size = new System.Drawing.Size(100, 23);
-            this.button_Nuevo.TabIndex = 15;
+            this.button_Nuevo.TabIndex = 10;
             this.button_Nuevo.Text = "Nuevo";
             this.button_Nuevo.UseVisualStyleBackColor = true;
             this.button_Nuevo.Click += new System.EventHandler(this.button_Nuevo_Click);
@@ -122,7 +125,7 @@
             this.textBox_Direccion.Multiline = true;
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(225, 51);
-            this.textBox_Direccion.TabIndex = 1;
+            this.textBox_Direccion.TabIndex = 7;
             // 
             // label8
             // 
@@ -139,7 +142,7 @@
             this.dateTimePicker_FechaNacimiento.Location = new System.Drawing.Point(37, 388);
             this.dateTimePicker_FechaNacimiento.Name = "dateTimePicker_FechaNacimiento";
             this.dateTimePicker_FechaNacimiento.Size = new System.Drawing.Size(225, 24);
-            this.dateTimePicker_FechaNacimiento.TabIndex = 1;
+            this.dateTimePicker_FechaNacimiento.TabIndex = 6;
             // 
             // label7
             // 
@@ -155,7 +158,7 @@
             this.button_Eliminar.Location = new System.Drawing.Point(37, 517);
             this.button_Eliminar.Name = "button_Eliminar";
             this.button_Eliminar.Size = new System.Drawing.Size(100, 23);
-            this.button_Eliminar.TabIndex = 12;
+            this.button_Eliminar.TabIndex = 9;
             this.button_Eliminar.Text = "Eliminar";
             this.button_Eliminar.UseVisualStyleBackColor = true;
             this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
@@ -165,7 +168,7 @@
             this.button_Guardar.Location = new System.Drawing.Point(162, 517);
             this.button_Guardar.Name = "button_Guardar";
             this.button_Guardar.Size = new System.Drawing.Size(100, 23);
-            this.button_Guardar.TabIndex = 1;
+            this.button_Guardar.TabIndex = 8;
             this.button_Guardar.Text = "Guardar";
             this.button_Guardar.UseVisualStyleBackColor = true;
             this.button_Guardar.Click += new System.EventHandler(this.button_Guardar_Click);
@@ -176,7 +179,7 @@
             this.textBox_NumeroDosis.MaxLength = 1;
             this.textBox_NumeroDosis.Name = "textBox_NumeroDosis";
             this.textBox_NumeroDosis.Size = new System.Drawing.Size(225, 22);
-            this.textBox_NumeroDosis.TabIndex = 10;
+            this.textBox_NumeroDosis.TabIndex = 5;
             this.textBox_NumeroDosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_NumeroDosis_KeyPress);
             // 
             // label6
@@ -194,7 +197,7 @@
             this.textBox_Telefono.MaxLength = 10;
             this.textBox_Telefono.Name = "textBox_Telefono";
             this.textBox_Telefono.Size = new System.Drawing.Size(225, 22);
-            this.textBox_Telefono.TabIndex = 8;
+            this.textBox_Telefono.TabIndex = 4;
             this.textBox_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Telefono_KeyPress);
             // 
             // label5
@@ -212,7 +215,7 @@
             this.textBox_Cedula.MaxLength = 10;
             this.textBox_Cedula.Name = "textBox_Cedula";
             this.textBox_Cedula.Size = new System.Drawing.Size(225, 22);
-            this.textBox_Cedula.TabIndex = 6;
+            this.textBox_Cedula.TabIndex = 2;
             this.textBox_Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Cedula_KeyPress);
             // 
             // label4
@@ -230,7 +233,7 @@
             this.textBox_Apellido.MaxLength = 50;
             this.textBox_Apellido.Name = "textBox_Apellido";
             this.textBox_Apellido.Size = new System.Drawing.Size(225, 22);
-            this.textBox_Apellido.TabIndex = 4;
+            this.textBox_Apellido.TabIndex = 1;
             this.textBox_Apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Apellido_KeyPress);
             // 
             // label3
@@ -249,7 +252,7 @@
             this.textBox_Nombre.MaxLength = 50;
             this.textBox_Nombre.Name = "textBox_Nombre";
             this.textBox_Nombre.Size = new System.Drawing.Size(225, 22);
-            this.textBox_Nombre.TabIndex = 2;
+            this.textBox_Nombre.TabIndex = 0;
             this.textBox_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Nombre_KeyPress);
             // 
             // label2
@@ -267,7 +270,8 @@
             this.textBox_Id.Name = "textBox_Id";
             this.textBox_Id.ReadOnly = true;
             this.textBox_Id.Size = new System.Drawing.Size(225, 22);
-            this.textBox_Id.TabIndex = 1;
+            this.textBox_Id.TabIndex = 3;
+            this.textBox_Id.TabStop = false;
             // 
             // label1
             // 
@@ -275,23 +279,27 @@
             this.label1.Location = new System.Drawing.Point(34, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 16);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 14;
             this.label1.Text = "ID";
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox_SumatoriaNumeroDosis);
             this.groupBox2.Controls.Add(this.dataGridView_ListaPersonasVacunadas);
             this.groupBox2.Location = new System.Drawing.Point(318, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(892, 549);
-            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTA PERSONAS VACUNADAS";
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(571, 524);
             this.label9.Name = "label9";
@@ -301,6 +309,7 @@
             // 
             // textBox_SumatoriaNumeroDosis
             // 
+            this.textBox_SumatoriaNumeroDosis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_SumatoriaNumeroDosis.Location = new System.Drawing.Point(786, 521);
             this.textBox_SumatoriaNumeroDosis.Name = "textBox_SumatoriaNumeroDosis";
             this.textBox_SumatoriaNumeroDosis.ReadOnly = true;
@@ -309,6 +318,9 @@
             // 
             // dataGridView_ListaPersonasVacunadas
             // 
+            this.dataGridView_ListaPersonasVacunadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_ListaPersonasVacunadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_ListaPersonasVacunadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ListaPersonasVacunadas.Location = new System.Drawing.Point(6, 21);
@@ -316,7 +328,8 @@
             this.dataGridView_ListaPersonasVacunadas.RowHeadersWidth = 51;
             this.dataGridView_ListaPersonasVacunadas.RowTemplate.Height = 24;
             this.dataGridView_ListaPersonasVacunadas.Size = new System.Drawing.Size(880, 494);
-            this.dataGridView_ListaPersonasVacunadas.TabIndex = 0;
+            this.dataGridView_ListaPersonasVacunadas.TabIndex = 1;
+            this.dataGridView_ListaPersonasVacunadas.TabStop = false;
             this.dataGridView_ListaPersonasVacunadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaPersonasVacunadas_CellClick);
             // 
             // Form_PersonalVacunado
@@ -330,6 +343,7 @@
             this.Name = "Form_PersonalVacunado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Vacunado";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_PersonalVacunado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
