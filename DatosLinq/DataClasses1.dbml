@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Vacunacion" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Vacunacion;Integrated Security=True" SettingsObjectName="DatosLinq.Properties.Settings" SettingsPropertyName="VacunacionConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Genero" Member="Genero">
+    <Type Name="Genero">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Genero_PersonalVacunado" Member="PersonalVacunado" ThisKey="id" OtherKey="id_Genero" Type="PersonalVacunado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonalVacunado" Member="PersonalVacunado">
+    <Type Name="PersonalVacunado">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Genero" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="apellido" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cedula" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="telefono" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="numeroDosis" Type="System.Int32" DbType="Int" CanBeNull="false" />
+      <Column Name="fechaNacimiento" Type="System.DateTime" DbType="Date" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Genero_PersonalVacunado" Member="Genero" ThisKey="id_Genero" OtherKey="id" Type="Genero" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_SumatoriaNumeroDosis" Member="View_SumatoriaNumeroDosis">
+    <Type Name="View_SumatoriaNumeroDosis">
+      <Column Name="SUMA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

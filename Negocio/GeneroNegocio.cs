@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Entidad;
-using Datos;
+//using Datos;
+using DatosLinq;
 
 namespace Negocio
 {

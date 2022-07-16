@@ -41,11 +41,8 @@ C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoPar
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Presentacion.pdb
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Entidad.dll
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Negocio.dll
-C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Datos.dll
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Entidad.pdb
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Negocio.pdb
-C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Datos.pdb
-C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\Datos.dll.config
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.Form_PersonalVacunado.resources
@@ -55,3 +52,6 @@ C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoPar
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\DatosLinq.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\DatosLinq.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Presentacion\bin\Debug\DatosLinq.dll.config

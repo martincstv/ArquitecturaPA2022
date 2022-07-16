@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidad", "Entidad\Entidad.csproj", "{E7FA4F38-EAD2-4C82-80BB-10363B40AAE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatosLinq", "DatosLinq\DatosLinq.csproj", "{3212F754-719D-4D08-A6F4-B38626149A66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E7FA4F38-EAD2-4C82-80BB-10363B40AAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7FA4F38-EAD2-4C82-80BB-10363B40AAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7FA4F38-EAD2-4C82-80BB-10363B40AAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3212F754-719D-4D08-A6F4-B38626149A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3212F754-719D-4D08-A6F4-B38626149A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3212F754-719D-4D08-A6F4-B38626149A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3212F754-719D-4D08-A6F4-B38626149A66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
