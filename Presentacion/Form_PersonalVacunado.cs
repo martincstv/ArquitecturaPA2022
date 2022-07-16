@@ -24,7 +24,18 @@ namespace Presentacion
 
         private void Form_PersonalVacunado_Load(object sender, EventArgs e)
         {
+            CargarValoresIniciales();
+        }
 
+        private void CargarValoresIniciales()
+        {
+            CargarPersonalVacunadoEnDataGrid();
+        }
+
+        private void CargarPersonalVacunadoEnDataGrid()
+        {
+            dataGridView_ListaPersonasVacunadas.DataSource = null;
+            dataGridView_ListaPersonasVacunadas.DataSource = PersonalVacunadoNegocio.DevolverListaPersonasVacunadas();
         }
 
         private void button_Guardar_Click(object sender, EventArgs e)
@@ -45,6 +56,7 @@ namespace Presentacion
             {
                 textBox_Id.Text = personalVacunado.Id.ToString();
                 MessageBox.Show("Los datos se han ingresado correctamente");
+                CargarPersonalVacunadoEnDataGrid();
             }
             else
             {
@@ -162,8 +174,41 @@ namespace Presentacion
                 e.Handled = true;
             }
         }
+
         #endregion
 
+        private void dataGridView_ListaPersonasVacunadas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = Convert.ToInt32(dataGridView_ListaPersonasVacunadas.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+            CargarPersonalVacunadoPorId(id);
+        }
 
+        private void CargarPersonalVacunadoPorId(int id)
+        {
+            personalVacunado = PersonalVacunadoNegocio.DevolverPersonalVacunadoPorId(id);
+            textBox_Id.Text = personalVacunado.Id.ToString();
+            textBox_Nombre.Text = personalVacunado.Nombre;
+            textBox_Apellido.Text = personalVacunado.Apellido;
+            textBox_Cedula.Text = personalVacunado.Cedula;
+            textBox_Telefono.Text = personalVacunado.Telefono;
+            textBox_NumeroDosis.Text = personalVacunado.NumeroDosis.ToString();
+        }
+
+        private void button_Eliminar_Click(object sender, EventArgs e)
+        {
+            EliminarPersonalVacunado();
+        }
+
+        private void EliminarPersonalVacunado()
+        {
+            if (MessageBox.Show("Esta Ud. realmente seguro de eliminar este registro???", "Eliminar Dato", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (PersonalVacunadoNegocio.ElimminarPersonalVacunado(personalVacunado.Id))
+                {
+                    MessageBox.Show("El dato fue eliminado satisfactoriamente!!!");
+                    CargarPersonalVacunadoEnDataGrid();
+                }
+            }
+        }
     }
 }

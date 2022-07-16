@@ -15,12 +15,29 @@ namespace Negocio
         {
             if (personalVacunado.Id == 0)
             {
+                //Crea un nuevo registro
                 return PersonalVacunadoDatos.Nuevo(personalVacunado);
             }
             else
             {
-                return null;
+                //Actualiza el registro
+                return PersonalVacunadoDatos.Actualizar(personalVacunado);
             }
+        }
+
+        public static List<PersonalVacunadoEntidad> DevolverListaPersonasVacunadas()
+        {
+            return PersonalVacunadoDatos.DevolverListaPersonasVacunadas();
+        }
+
+        public static PersonalVacunadoEntidad DevolverPersonalVacunadoPorId(int identificador)
+        {
+            return PersonalVacunadoDatos.DevolverPersonalVacunadoPorId(identificador);
+        }
+
+        public static bool ElimminarPersonalVacunado(int identificador)
+        {
+            return PersonalVacunadoDatos.ElimminarPersonalVacunado(identificador);
         }
     }
 }

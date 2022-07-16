@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_ListaPersonasVacunadas = new System.Windows.Forms.DataGridView();
+            this.button_Eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListaPersonasVacunadas)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_Eliminar);
             this.groupBox1.Controls.Add(this.button_Guardar);
             this.groupBox1.Controls.Add(this.textBox_NumeroDosis);
             this.groupBox1.Controls.Add(this.label6);
@@ -208,6 +210,17 @@
             this.dataGridView_ListaPersonasVacunadas.RowTemplate.Height = 24;
             this.dataGridView_ListaPersonasVacunadas.Size = new System.Drawing.Size(880, 494);
             this.dataGridView_ListaPersonasVacunadas.TabIndex = 0;
+            this.dataGridView_ListaPersonasVacunadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaPersonasVacunadas_CellClick);
+            // 
+            // button_Eliminar
+            // 
+            this.button_Eliminar.Location = new System.Drawing.Point(37, 443);
+            this.button_Eliminar.Name = "button_Eliminar";
+            this.button_Eliminar.Size = new System.Drawing.Size(100, 23);
+            this.button_Eliminar.TabIndex = 12;
+            this.button_Eliminar.Text = "Eliminar";
+            this.button_Eliminar.UseVisualStyleBackColor = true;
+            this.button_Eliminar.Click += new System.EventHandler(this.button_Eliminar_Click);
             // 
             // Form_PersonalVacunado
             // 
@@ -247,6 +260,7 @@
         private System.Windows.Forms.TextBox textBox_Id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView_ListaPersonasVacunadas;
+        private System.Windows.Forms.Button button_Eliminar;
     }
 }
 
