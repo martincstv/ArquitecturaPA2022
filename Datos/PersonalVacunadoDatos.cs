@@ -21,20 +21,15 @@ namespace Datos
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = @"INSERT INTO [dbo].[PersonalVacunado]
-                                               ([nombre]
-                                               ,[apellido]
-                                               ,[cedula]
-                                               ,[telefono]
-                                               ,[numeroDosis])
-                                         VALUES(@nombre, @apellido, @cedula, @telefono, @numeroDosis);
-                                         SELECT SCOPE_IDENTITY()";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_NuevoPaciente";
                 cmd.Parameters.AddWithValue("@nombre", personalVacunado.Nombre);
                 cmd.Parameters.AddWithValue("@apellido", personalVacunado.Apellido);
                 cmd.Parameters.AddWithValue("@cedula", personalVacunado.Cedula);
                 cmd.Parameters.AddWithValue("@telefono", personalVacunado.Telefono);
                 cmd.Parameters.AddWithValue("@numeroDosis", personalVacunado.NumeroDosis);
+                cmd.Parameters.AddWithValue("@fechaNacimiento", personalVacunado.FechaNacimiento);
+                cmd.Parameters.AddWithValue("@direccion", personalVacunado.Direccion);
 
                 int idPersonaVacunada = Convert.ToInt32(cmd.ExecuteScalar());
                 personalVacunado.Id = idPersonaVacunada;
@@ -63,6 +58,8 @@ namespace Datos
                                       ,[cedula] = @cedula
                                       ,[telefono] = @telefono
                                       ,[numeroDosis] = @numeroDosis
+                                      ,[fechaNacimiento] = @fechaNacimiento
+                                      ,[direccion] = @direccion
                                  WHERE id = @id";
 
                 cmd.Parameters.AddWithValue("@id", personalVacunado.Id);
@@ -71,6 +68,8 @@ namespace Datos
                 cmd.Parameters.AddWithValue("@cedula", personalVacunado.Cedula);
                 cmd.Parameters.AddWithValue("@telefono", personalVacunado.Telefono);
                 cmd.Parameters.AddWithValue("@numeroDosis", personalVacunado.NumeroDosis);
+                cmd.Parameters.AddWithValue("@fechaNacimiento", personalVacunado.FechaNacimiento);
+                cmd.Parameters.AddWithValue("@direccion", personalVacunado.Direccion);
 
                 cmd.ExecuteNonQuery();
                 conexion.Close();
@@ -86,6 +85,60 @@ namespace Datos
 
         }
 
+        //public static List<PersonalVacunadoEntidad> DevolverListaPersonasVacunadas()
+        //{
+        //    try
+        //    {
+        //        //Lista de objeto en el cual vamos a devolver la informacion
+        //        List<PersonalVacunadoEntidad> listaPersonasVacunadas = new List<PersonalVacunadoEntidad>();
+
+        //        SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionBD);
+        //        conexion.Open();
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd.Connection = conexion;
+        //        cmd.CommandType = CommandType.Text;
+        //        cmd.CommandText = @"SELECT [id]
+        //                                  ,[nombre]
+        //                                  ,[apellido]
+        //                                  ,[cedula]
+        //                                  ,[telefono]
+        //                                  ,[numeroDosis]
+        //                                  ,[fechaNacimiento]
+        //                                  ,[direccion]
+        //                              FROM [dbo].[PersonalVacunado]";
+
+        //        //DataTable OR DataSet NOO se usa en esta arquitectura en capas
+        //        using (var dr = cmd.ExecuteReader())//Trae todos los datos de la base
+        //        {
+        //            //dr == dataReader variable para entender Ok
+        //            while (dr.Read())//Lee fila por fila todos los objetos de dr
+        //            {
+        //                //Convertir de SqlDataReader ==> PersonalVacunadoEntidad
+        //                PersonalVacunadoEntidad personalVacunado = new PersonalVacunadoEntidad();
+
+        //                personalVacunado.Id = Convert.ToInt32(dr["id"].ToString());
+        //                personalVacunado.Nombre = dr["nombre"].ToString();
+        //                personalVacunado.Apellido = dr["apellido"].ToString();
+        //                personalVacunado.Cedula = dr["cedula"].ToString();
+        //                personalVacunado.Telefono = dr["telefono"].ToString();
+        //                personalVacunado.NumeroDosis = Convert.ToInt32(dr["numeroDosis"].ToString());
+        //                personalVacunado.FechaNacimiento = Convert.ToDateTime(dr["fechaNacimiento"].ToString());
+        //                personalVacunado.Direccion = dr["direccion"].ToString();
+
+        //                //Cargar los datos ==> listaPersonasVacunadas
+        //                listaPersonasVacunadas.Add(personalVacunado);
+        //            }
+        //        }
+        //        conexion.Close();
+        //        return listaPersonasVacunadas;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        var error = e.Message;
+        //        throw;
+        //    }
+        //}
+
         public static List<PersonalVacunadoEntidad> DevolverListaPersonasVacunadas()
         {
             try
@@ -97,14 +150,8 @@ namespace Datos
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conexion;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = @"SELECT [id]
-                                          ,[nombre]
-                                          ,[apellido]
-                                          ,[cedula]
-                                          ,[telefono]
-                                          ,[numeroDosis]
-                                      FROM [dbo].[PersonalVacunado]";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_DevolverListaPersonasVacunadas";
 
                 //DataTable OR DataSet NOO se usa en esta arquitectura en capas
                 using (var dr = cmd.ExecuteReader())//Trae todos los datos de la base
@@ -114,13 +161,15 @@ namespace Datos
                     {
                         //Convertir de SqlDataReader ==> PersonalVacunadoEntidad
                         PersonalVacunadoEntidad personalVacunado = new PersonalVacunadoEntidad();
-                        
+
                         personalVacunado.Id = Convert.ToInt32(dr["id"].ToString());
                         personalVacunado.Nombre = dr["nombre"].ToString();
                         personalVacunado.Apellido = dr["apellido"].ToString();
                         personalVacunado.Cedula = dr["cedula"].ToString();
                         personalVacunado.Telefono = dr["telefono"].ToString();
                         personalVacunado.NumeroDosis = Convert.ToInt32(dr["numeroDosis"].ToString());
+                        personalVacunado.FechaNacimiento = Convert.ToDateTime(dr["fechaNacimiento"].ToString());
+                        personalVacunado.Direccion = dr["direccion"].ToString();
 
                         //Cargar los datos ==> listaPersonasVacunadas
                         listaPersonasVacunadas.Add(personalVacunado);
@@ -153,10 +202,12 @@ namespace Datos
                                           ,[cedula]
                                           ,[telefono]
                                           ,[numeroDosis]
+                                          ,[fechaNacimiento]
+                                          ,[direccion]
                                       FROM [dbo].[PersonalVacunado]
                                       WHERE id = @id";
 
-                cmd.Parameters.AddWithValue("@id",identificador);
+                cmd.Parameters.AddWithValue("@id", identificador);
                 using (var dr = cmd.ExecuteReader())
                 {
                     dr.Read();
@@ -168,6 +219,8 @@ namespace Datos
                         personalVacunado.Cedula = dr["cedula"].ToString();
                         personalVacunado.Telefono = dr["telefono"].ToString();
                         personalVacunado.NumeroDosis = Convert.ToInt32(dr["numeroDosis"].ToString());
+                        personalVacunado.FechaNacimiento = Convert.ToDateTime(dr["fechaNacimiento"].ToString());
+                        personalVacunado.Direccion = dr["direccion"].ToString();
 
                     }
                 }
@@ -207,6 +260,30 @@ namespace Datos
             catch (Exception e)
             {
                 var error = e.Message;
+                throw;
+            }
+        }
+
+        public static double DevolverSumatoriaCantidadDosis()
+        {
+            try
+            {
+
+                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexionBD);
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conexion;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = @"SELECT SUM(numeroDosis) AS SUMA
+                                        FROM PersonalVacunado";
+
+                double resultado = Convert.ToDouble(cmd.ExecuteScalar());
+                conexion.Close();
+                return resultado;
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

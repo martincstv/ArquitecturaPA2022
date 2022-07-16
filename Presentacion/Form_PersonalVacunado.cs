@@ -30,12 +30,19 @@ namespace Presentacion
         private void CargarValoresIniciales()
         {
             CargarPersonalVacunadoEnDataGrid();
+            SumatoriaNumeroDosis();
         }
 
         private void CargarPersonalVacunadoEnDataGrid()
         {
             dataGridView_ListaPersonasVacunadas.DataSource = null;
             dataGridView_ListaPersonasVacunadas.DataSource = PersonalVacunadoNegocio.DevolverListaPersonasVacunadas();
+        }
+
+        private void SumatoriaNumeroDosis()
+        {
+            textBox_SumatoriaNumeroDosis.Text = null;
+            textBox_SumatoriaNumeroDosis.Text = PersonalVacunadoNegocio.DevolverSumatoriaCantidadDosis().ToString();
         }
 
         private void button_Guardar_Click(object sender, EventArgs e)
@@ -50,6 +57,8 @@ namespace Presentacion
             personalVacunado.Cedula = textBox_Cedula.Text;
             personalVacunado.Telefono = textBox_Telefono.Text;
             personalVacunado.NumeroDosis = Convert.ToInt32(textBox_NumeroDosis.Text);
+            personalVacunado.FechaNacimiento = dateTimePicker_FechaNacimiento.Value;
+            personalVacunado.Direccion = textBox_Direccion.Text.ToUpper();
 
             personalVacunado = PersonalVacunadoNegocio.Guardar(personalVacunado);
             if (personalVacunado != null)
@@ -57,6 +66,7 @@ namespace Presentacion
                 textBox_Id.Text = personalVacunado.Id.ToString();
                 MessageBox.Show("Los datos se han ingresado correctamente");
                 CargarPersonalVacunadoEnDataGrid();
+                SumatoriaNumeroDosis();
             }
             else
             {
@@ -192,6 +202,8 @@ namespace Presentacion
             textBox_Cedula.Text = personalVacunado.Cedula;
             textBox_Telefono.Text = personalVacunado.Telefono;
             textBox_NumeroDosis.Text = personalVacunado.NumeroDosis.ToString();
+            dateTimePicker_FechaNacimiento.Value = personalVacunado.FechaNacimiento;
+            textBox_Direccion.Text = personalVacunado.Direccion;
         }
 
         private void button_Eliminar_Click(object sender, EventArgs e)
@@ -207,6 +219,7 @@ namespace Presentacion
                 {
                     MessageBox.Show("El dato fue eliminado satisfactoriamente!!!");
                     CargarPersonalVacunadoEnDataGrid();
+                    SumatoriaNumeroDosis();
                 }
             }
         }

@@ -10,3 +10,15 @@ D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.dll
 D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Negocio.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Negocio.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Datos.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Entidad.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Datos.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Datos.dll.config
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\bin\Debug\Entidad.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.pdb

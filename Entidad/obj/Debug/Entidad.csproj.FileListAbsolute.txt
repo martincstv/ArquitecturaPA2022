@@ -4,3 +4,9 @@ D:\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
 D:\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 D:\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.dll
 D:\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\bin\Debug\Entidad.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\bin\Debug\Entidad.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Entidad\obj\Debug\Entidad.pdb

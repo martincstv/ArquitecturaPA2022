@@ -8,3 +8,13 @@ D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CopyComplete
 D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.dll
 D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\bin\Debug\Datos.dll.config
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\bin\Debug\Datos.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\bin\Debug\Datos.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\bin\Debug\Entidad.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\bin\Debug\Entidad.pdb
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\obj\Debug\Datos.dll
+D:\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\Datos\obj\Debug\Datos.pdb

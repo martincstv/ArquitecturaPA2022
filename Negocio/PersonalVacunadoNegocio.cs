@@ -39,5 +39,10 @@ namespace Negocio
         {
             return PersonalVacunadoDatos.ElimminarPersonalVacunado(identificador);
         }
+
+        public static double DevolverSumatoriaCantidadDosis()
+        {
+            return PersonalVacunadoDatos.DevolverSumatoriaCantidadDosis();
+        }
     }
 }

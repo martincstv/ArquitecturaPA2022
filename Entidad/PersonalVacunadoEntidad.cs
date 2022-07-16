@@ -14,12 +14,15 @@ namespace Entidad
         public string Cedula { get; set; }
         public string Telefono { get; set; }
         public int NumeroDosis { get; set; }
+        public  DateTime FechaNacimiento { get; set; }
+        public string Direccion { get; set; }
+
         public PersonalVacunadoEntidad()
         {
 
         }
 
-        public PersonalVacunadoEntidad(int id, string nombre, string apellido, string cedula, string telefono, int numeroDosis)
+        public PersonalVacunadoEntidad(int id, string nombre, string apellido, string cedula, string telefono, int numeroDosis, DateTime fechaNacimiento, string direccion)
         {
             Id = id;
             Nombre = nombre;
@@ -27,6 +30,8 @@ namespace Entidad
             Cedula = cedula;
             Telefono = telefono;
             NumeroDosis = numeroDosis;
+            FechaNacimiento = fechaNacimiento;
+            Direccion = direccion;
         }
     }
 }
