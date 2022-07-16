@@ -30,7 +30,20 @@ namespace Presentacion
         private void CargarValoresIniciales()
         {
             CargarPersonalVacunadoEnDataGrid();
+            CargarCombos();
             SumatoriaNumeroDosis();
+        }
+
+        private void CargarCombos()
+        {
+            CargarComboGenero();
+        }
+
+        private void CargarComboGenero()
+        {
+            comboBox_Genero.DataSource = GeneroNegocio.DevolverListaGeneros();
+            comboBox_Genero.DisplayMember = "nombre";
+            comboBox_Genero.ValueMember = "id";
         }
 
         private void CargarPersonalVacunadoEnDataGrid()
@@ -55,6 +68,7 @@ namespace Presentacion
             personalVacunado.Nombre = textBox_Nombre.Text.ToUpper();
             personalVacunado.Apellido = textBox_Apellido.Text.ToUpper();
             personalVacunado.Cedula = textBox_Cedula.Text;
+            personalVacunado.Id_Genero = (int) comboBox_Genero.SelectedValue;
             personalVacunado.Telefono = textBox_Telefono.Text;
             personalVacunado.NumeroDosis = Convert.ToInt32(textBox_NumeroDosis.Text);
             personalVacunado.FechaNacimiento = dateTimePicker_FechaNacimiento.Value;
@@ -199,6 +213,7 @@ namespace Presentacion
             textBox_Id.Text = personalVacunado.Id.ToString();
             textBox_Nombre.Text = personalVacunado.Nombre;
             textBox_Apellido.Text = personalVacunado.Apellido;
+            comboBox_Genero.SelectedValue = personalVacunado.Id_Genero;
             textBox_Cedula.Text = personalVacunado.Cedula;
             textBox_Telefono.Text = personalVacunado.Telefono;
             textBox_NumeroDosis.Text = personalVacunado.NumeroDosis.ToString();
@@ -222,6 +237,25 @@ namespace Presentacion
                     SumatoriaNumeroDosis();
                 }
             }
+        }
+
+        private void LimpiarControles()
+        {
+            personalVacunado.Id = 0;
+            textBox_Id.Clear();
+            textBox_Nombre.Clear();
+            textBox_Apellido.Clear();
+            textBox_Cedula.Clear();
+            comboBox_Genero.SelectedValue = 0;
+            textBox_Telefono.Clear();
+            textBox_NumeroDosis.Clear();
+            dateTimePicker_FechaNacimiento.Value = DateTime.Now;
+            textBox_Direccion.Clear();
+        }
+
+        private void button_Nuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
         }
     }
 }

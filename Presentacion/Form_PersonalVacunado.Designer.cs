@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_Nuevo = new System.Windows.Forms.Button();
+            this.comboBox_Genero = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox_Direccion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker_FechaNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -48,9 +51,9 @@
             this.textBox_Id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView_ListaPersonasVacunadas = new System.Windows.Forms.DataGridView();
-            this.textBox_SumatoriaNumeroDosis = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBox_SumatoriaNumeroDosis = new System.Windows.Forms.TextBox();
+            this.dataGridView_ListaPersonasVacunadas = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListaPersonasVacunadas)).BeginInit();
@@ -58,6 +61,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_Nuevo);
+            this.groupBox1.Controls.Add(this.comboBox_Genero);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textBox_Direccion);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dateTimePicker_FechaNacimiento);
@@ -83,9 +89,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PERSONA VACUNADA";
             // 
+            // button_Nuevo
+            // 
+            this.button_Nuevo.Location = new System.Drawing.Point(37, 489);
+            this.button_Nuevo.Name = "button_Nuevo";
+            this.button_Nuevo.Size = new System.Drawing.Size(100, 23);
+            this.button_Nuevo.TabIndex = 15;
+            this.button_Nuevo.Text = "Nuevo";
+            this.button_Nuevo.UseVisualStyleBackColor = true;
+            this.button_Nuevo.Click += new System.EventHandler(this.button_Nuevo_Click);
+            // 
+            // comboBox_Genero
+            // 
+            this.comboBox_Genero.FormattingEnabled = true;
+            this.comboBox_Genero.Location = new System.Drawing.Point(37, 254);
+            this.comboBox_Genero.Name = "comboBox_Genero";
+            this.comboBox_Genero.Size = new System.Drawing.Size(225, 24);
+            this.comboBox_Genero.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(34, 235);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "GENERO";
+            // 
             // textBox_Direccion
             // 
-            this.textBox_Direccion.Location = new System.Drawing.Point(37, 386);
+            this.textBox_Direccion.Location = new System.Drawing.Point(37, 432);
             this.textBox_Direccion.Multiline = true;
             this.textBox_Direccion.Name = "textBox_Direccion";
             this.textBox_Direccion.Size = new System.Drawing.Size(225, 51);
@@ -94,7 +127,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 367);
+            this.label8.Location = new System.Drawing.Point(34, 413);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
             this.label8.TabIndex = 14;
@@ -102,16 +135,16 @@
             // 
             // dateTimePicker_FechaNacimiento
             // 
-            this.dateTimePicker_FechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker_FechaNacimiento.Location = new System.Drawing.Point(37, 342);
+            this.dateTimePicker_FechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_FechaNacimiento.Location = new System.Drawing.Point(37, 388);
             this.dateTimePicker_FechaNacimiento.Name = "dateTimePicker_FechaNacimiento";
-            this.dateTimePicker_FechaNacimiento.Size = new System.Drawing.Size(225, 22);
+            this.dateTimePicker_FechaNacimiento.Size = new System.Drawing.Size(225, 24);
             this.dateTimePicker_FechaNacimiento.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 323);
+            this.label7.Location = new System.Drawing.Point(34, 369);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 16);
             this.label7.TabIndex = 13;
@@ -119,7 +152,7 @@
             // 
             // button_Eliminar
             // 
-            this.button_Eliminar.Location = new System.Drawing.Point(37, 443);
+            this.button_Eliminar.Location = new System.Drawing.Point(37, 517);
             this.button_Eliminar.Name = "button_Eliminar";
             this.button_Eliminar.Size = new System.Drawing.Size(100, 23);
             this.button_Eliminar.TabIndex = 12;
@@ -129,7 +162,7 @@
             // 
             // button_Guardar
             // 
-            this.button_Guardar.Location = new System.Drawing.Point(162, 443);
+            this.button_Guardar.Location = new System.Drawing.Point(162, 517);
             this.button_Guardar.Name = "button_Guardar";
             this.button_Guardar.Size = new System.Drawing.Size(100, 23);
             this.button_Guardar.TabIndex = 1;
@@ -139,7 +172,7 @@
             // 
             // textBox_NumeroDosis
             // 
-            this.textBox_NumeroDosis.Location = new System.Drawing.Point(37, 298);
+            this.textBox_NumeroDosis.Location = new System.Drawing.Point(37, 344);
             this.textBox_NumeroDosis.MaxLength = 1;
             this.textBox_NumeroDosis.Name = "textBox_NumeroDosis";
             this.textBox_NumeroDosis.Size = new System.Drawing.Size(225, 22);
@@ -149,7 +182,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 279);
+            this.label6.Location = new System.Drawing.Point(34, 325);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 16);
             this.label6.TabIndex = 11;
@@ -157,7 +190,7 @@
             // 
             // textBox_Telefono
             // 
-            this.textBox_Telefono.Location = new System.Drawing.Point(37, 254);
+            this.textBox_Telefono.Location = new System.Drawing.Point(37, 300);
             this.textBox_Telefono.MaxLength = 10;
             this.textBox_Telefono.Name = "textBox_Telefono";
             this.textBox_Telefono.Size = new System.Drawing.Size(225, 22);
@@ -167,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 235);
+            this.label5.Location = new System.Drawing.Point(34, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 16);
             this.label5.TabIndex = 9;
@@ -257,6 +290,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTA PERSONAS VACUNADAS";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(571, 524);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(194, 16);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "SUMATORIA NUMERO DOSIS";
+            // 
+            // textBox_SumatoriaNumeroDosis
+            // 
+            this.textBox_SumatoriaNumeroDosis.Location = new System.Drawing.Point(786, 521);
+            this.textBox_SumatoriaNumeroDosis.Name = "textBox_SumatoriaNumeroDosis";
+            this.textBox_SumatoriaNumeroDosis.ReadOnly = true;
+            this.textBox_SumatoriaNumeroDosis.Size = new System.Drawing.Size(100, 22);
+            this.textBox_SumatoriaNumeroDosis.TabIndex = 1;
+            // 
             // dataGridView_ListaPersonasVacunadas
             // 
             this.dataGridView_ListaPersonasVacunadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -268,23 +318,6 @@
             this.dataGridView_ListaPersonasVacunadas.Size = new System.Drawing.Size(880, 494);
             this.dataGridView_ListaPersonasVacunadas.TabIndex = 0;
             this.dataGridView_ListaPersonasVacunadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListaPersonasVacunadas_CellClick);
-            // 
-            // textBox_SumatoriaNumeroDosis
-            // 
-            this.textBox_SumatoriaNumeroDosis.Location = new System.Drawing.Point(786, 521);
-            this.textBox_SumatoriaNumeroDosis.Name = "textBox_SumatoriaNumeroDosis";
-            this.textBox_SumatoriaNumeroDosis.ReadOnly = true;
-            this.textBox_SumatoriaNumeroDosis.Size = new System.Drawing.Size(100, 22);
-            this.textBox_SumatoriaNumeroDosis.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(571, 524);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 16);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "SUMATORIA NUMERO DOSIS";
             // 
             // Form_PersonalVacunado
             // 
@@ -332,6 +365,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_FechaNacimiento;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox_SumatoriaNumeroDosis;
+        private System.Windows.Forms.ComboBox comboBox_Genero;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button_Nuevo;
     }
 }
 

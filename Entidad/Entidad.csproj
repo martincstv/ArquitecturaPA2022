@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneroEntidad.cs" />
     <Compile Include="PersonalVacunadoEntidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
