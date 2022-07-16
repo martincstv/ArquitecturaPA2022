@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VacunacionModelStoreContainer" CdmEntityContainer="VacunacionEntities">
+    <EntitySetMapping Name="Genero">
+      <EntityTypeMapping TypeName="VacunacionModel.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonalVacunado">
+      <EntityTypeMapping TypeName="VacunacionModel.PersonalVacunado">
+        <MappingFragment StoreEntitySet="PersonalVacunado">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_Genero" ColumnName="id_Genero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="numeroDosis" ColumnName="numeroDosis" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_SumatoriaNumeroDosis">
+      <EntityTypeMapping TypeName="VacunacionModel.View_SumatoriaNumeroDosis">
+        <MappingFragment StoreEntitySet="View_SumatoriaNumeroDosis">
+          <ScalarProperty Name="SUMA" ColumnName="SUMA" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

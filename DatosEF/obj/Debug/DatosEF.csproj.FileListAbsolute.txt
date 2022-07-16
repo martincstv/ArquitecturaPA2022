@@ -1,0 +1,14 @@
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\DatosEF.dll.config
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\DatosEF.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\DatosEF.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\Entidad.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\EntityFramework.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\Entidad.pdb
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\EntityFramework.xml
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\obj\Debug\DatosEF.csproj.AssemblyReference.cache
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\obj\Debug\DatosEF.csproj.CoreCompileInputs.cache
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\obj\Debug\DatosEF.csproj.CopyComplete
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\obj\Debug\DatosEF.dll
+C:\Users\dev79\OneDrive\Escritorio\Proyectos\ProgramacionAvanzada2022\SegundoParcial_ProgramacionAvanzada\ArquitecturaPA2022\DatosEF\obj\Debug\DatosEF.pdb

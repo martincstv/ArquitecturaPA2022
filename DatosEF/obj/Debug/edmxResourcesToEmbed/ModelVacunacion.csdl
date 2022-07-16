@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VacunacionModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PersonalVacunado" Relationship="Self.FK_PersonalVacunado_Genero" FromRole="Genero" ToRole="PersonalVacunado" />
+  </EntityType>
+  <EntityType Name="PersonalVacunado">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Genero" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cedula" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="numeroDosis" Type="Int32" Nullable="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Genero" Relationship="Self.FK_PersonalVacunado_Genero" FromRole="PersonalVacunado" ToRole="Genero" />
+  </EntityType>
+  <Association Name="FK_PersonalVacunado_Genero">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="1" />
+    <End Role="PersonalVacunado" Type="Self.PersonalVacunado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PersonalVacunado">
+        <PropertyRef Name="id_Genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VacunacionEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Genero" EntityType="Self.Genero" />
+    <EntitySet Name="PersonalVacunado" EntityType="Self.PersonalVacunado" />
+    <AssociationSet Name="FK_PersonalVacunado_Genero" Association="Self.FK_PersonalVacunado_Genero">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="PersonalVacunado" EntitySet="PersonalVacunado" />
+    </AssociationSet>
+    <EntitySet Name="View_SumatoriaNumeroDosis" EntityType="VacunacionModel.View_SumatoriaNumeroDosis" />
+  </EntityContainer>
+  <EntityType Name="View_SumatoriaNumeroDosis">
+    <Key>
+      <PropertyRef Name="direccion" />
+    </Key>
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SUMA" Type="Int32" />
+  </EntityType>
+</Schema>

@@ -16,6 +16,7 @@ namespace Presentacion
     public partial class Form_PersonalVacunado : Form
     {
         PersonalVacunadoEntidad personalVacunado = new PersonalVacunadoEntidad();
+        List<PersonalVacunadoEntidad> listaPVEntidad = new List<PersonalVacunadoEntidad>();
 
         public Form_PersonalVacunado()
         {
@@ -49,6 +50,7 @@ namespace Presentacion
         private void CargarPersonalVacunadoEnDataGrid()
         {
             dataGridView_ListaPersonasVacunadas.DataSource = null;
+            listaPVEntidad = PersonalVacunadoNegocio.DevolverListaPersonasVacunadas();
             dataGridView_ListaPersonasVacunadas.DataSource = PersonalVacunadoNegocio.DevolverListaPersonasVacunadas();
             dataGridView_ListaPersonasVacunadas.Columns["Id_Genero"].Visible = false;
             dataGridView_ListaPersonasVacunadas.Columns[0].HeaderText = "ID";
@@ -66,7 +68,7 @@ namespace Presentacion
         private void SumatoriaNumeroDosis()
         {
             textBox_SumatoriaNumeroDosis.Text = null;
-            textBox_SumatoriaNumeroDosis.Text = PersonalVacunadoNegocio.DevolverSumatoriaCantidadDosis().ToString();
+            textBox_SumatoriaNumeroDosis.Text = PersonalVacunadoNegocio.DevolverSumatoriaCantidadDosis(listaPVEntidad).ToString();
         }
 
         private void button_Guardar_Click(object sender, EventArgs e)

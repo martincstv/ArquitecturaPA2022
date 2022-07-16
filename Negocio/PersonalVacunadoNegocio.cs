@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 using Entidad;
 //using Datos;
-using DatosLinq;
+//using DatosLinq;
+using DatosEF;
 
 namespace Negocio
 {
@@ -41,9 +42,14 @@ namespace Negocio
             return PersonalVacunadoDatos.ElimminarPersonalVacunado(identificador);
         }
 
-        public static double DevolverSumatoriaCantidadDosis()
+        public static double DevolverSumatoriaCantidadDosis(List<PersonalVacunadoEntidad> listaPVEntidad)
         {
-            return PersonalVacunadoDatos.DevolverSumatoriaCantidadDosis();
+            double sumatoria = 0;
+            foreach (var item in listaPVEntidad)
+            {
+                sumatoria += item.NumeroDosis;
+            }
+            return sumatoria;
         }
     }
 }
