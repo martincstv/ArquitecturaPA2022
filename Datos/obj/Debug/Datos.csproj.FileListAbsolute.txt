@@ -1,0 +1,10 @@
+D:\ArquitecturaPA2022\Datos\bin\Debug\Datos.dll.config
+D:\ArquitecturaPA2022\Datos\bin\Debug\Datos.dll
+D:\ArquitecturaPA2022\Datos\bin\Debug\Datos.pdb
+D:\ArquitecturaPA2022\Datos\bin\Debug\Entidad.dll
+D:\ArquitecturaPA2022\Datos\bin\Debug\Entidad.pdb
+D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.dll
+D:\ArquitecturaPA2022\Datos\obj\Debug\Datos.pdb

@@ -1,0 +1,12 @@
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Negocio.dll
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Negocio.pdb
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Datos.dll
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Entidad.dll
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Datos.pdb
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Datos.dll.config
+D:\ArquitecturaPA2022\Negocio\bin\Debug\Entidad.pdb
+D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.dll
+D:\ArquitecturaPA2022\Negocio\obj\Debug\Negocio.pdb
